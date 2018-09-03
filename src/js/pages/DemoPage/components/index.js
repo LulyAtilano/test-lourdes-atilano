@@ -1,0 +1,1 @@
+export MuseumDetailModal from './MuseumDetailModal';

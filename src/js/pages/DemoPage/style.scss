@@ -1,0 +1,21 @@
+.demo-page {
+	.museum-list {
+		:global(.id) {
+			width: 20%
+		}
+		
+		:global(.name) {
+			width: 40%
+		}
+
+		:global(.location) {
+			width: 40%
+		}
+	}
+
+	.empty-panel {
+		> div {
+			width: 100%;
+		}
+	}
+}

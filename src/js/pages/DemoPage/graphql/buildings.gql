@@ -1,0 +1,12 @@
+query buildings ($filter: BuildingFilter) {
+  allBuildings(filter: $filter) {
+    name
+    id
+    city
+    country
+    state
+    street
+    neighborhood
+    image
+  }
+}
