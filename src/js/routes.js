@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
 import { hot } from 'react-hot-loader';
 
+import EmailApp from './pages/EmailApp';
 import App from './pages/App';
 import {
   LoginPage,
@@ -20,6 +21,7 @@ const routes = params => (
       <Route exact path="/logout" component={LogoutPage} />
       <Route exact path="/sign-up" component={SignUpPage} />
       <Route exact path="/recover-password" component={RecoveryPage} />
+      <Route exact path="/emailApp" component={EmailApp} />
       <Route exact path="/reset-password/:token?" component={ResetPasswordPage} />
       <Route exact path="/validate-account/:token?" component={ValidateAccountPage} />
       <Route path="/:section?/:id?" component={App} />
