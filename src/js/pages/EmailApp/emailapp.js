@@ -71,7 +71,7 @@ class EmailApp extends Component {
                   <span> business </span>
               </PanelRow>
               <PanelRow>
-                <div styleName="">_email content_</div>
+                <div styleName="container-email-text">_email content_</div>
               </PanelRow>
               <PanelRow styleName="row-final-reply">
                 icon
