@@ -12,9 +12,9 @@ class EmailApp extends Component {
 
     return (
       <div id="email-app" styleName="email-app">
-        <div styleName="email-list">
-          <Panel title="Email App">
-            <PanelBody>
+        <Panel>
+          <PanelBody styleName="container-left">
+            <div styleName="email-list">
               <PanelRow styleName="row-header">
                 <h5> Inbox </h5>
                 <label> 3 </label>
@@ -41,12 +41,18 @@ class EmailApp extends Component {
                   autoComplete="off"
                 />
               </PanelRow>
-            </PanelBody>
-          </Panel>
-        </div>
-        <div styleName="email-container">
-          <Panel title="Email">
-            <PanelBody>
+              <PanelRow styleName="container-title-email">
+                <div styleName="row-title-email">
+                    <h5 styleName="name-user"> Name User </h5>
+                    <span styleName="email-date"> 08:35 AM </span>
+                    <p styleName="title-email"> title email </p>
+                    <span styleName="attach-icon-email"> @ </span>
+                </div>
+              </PanelRow>
+            </div>
+          </PanelBody>
+          <PanelBody styleName="container-rigth">
+            <div styleName="email-container">
               <PanelRow styleName="buttons-row">
                 <Button styleName="error-btn-header"
                   color= "error"
@@ -58,7 +64,7 @@ class EmailApp extends Component {
                 > Mark as unread </Button>
               </PanelRow>
               <PanelRow styleName="row-header-user">
-                  <h3> _Name User </h3>
+                  <h3> Name User </h3>
               </PanelRow>
               <PanelRow styleName="row-subjects-tags">
                   <span> Inbox </span>
@@ -75,9 +81,9 @@ class EmailApp extends Component {
                   Replay
                 </Button>
               </PanelRow>
-            </PanelBody>
-          </Panel>
-        </div>
+            </div>
+          </PanelBody>
+        </Panel>
       </div>
     )
   }
