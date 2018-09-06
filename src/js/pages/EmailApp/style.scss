@@ -1,4 +1,5 @@
 .email-app {
+  box-shadow: 0px 0px 13px 6px rgba(196, 194, 196, 0.75);
   background-color: $body-bg;
   width: 100%;
   height: 100vh;
@@ -17,19 +18,22 @@
   }
 
   .container-rigth {
+    background-color: $body-bg;
+    padding: 15px;
     width: 60%;
   }
 
   .email-list,
   .email-container {
-    width: 50%;
+    width: 100%;
+    height: 100vh;
   }
 
   .row-header {
     display: inline-flex;
     flex-wrap: wrap;
-    padding: 15px;
-    width: 100%;
+    margin: 15px;
+    border-bottom: 1px solid $black-gray;
 
     h5 {
       display: inline;
@@ -47,14 +51,13 @@
     }
 
     .dropdown-header {
+      display: inline-flex;
       position: relative;
+      top: 0;
       right: 0px;
       margin-bottom: 0;
+      max-width: 10%;
       height: auto;
-      width: 20%;
-      display: inline-flex;
-      top: 0;
-      right: 0;
     }
   }
 
@@ -66,14 +69,8 @@
     color: $body-bg;
   }
 
-  .email-list,
-  .email-container {
-    width: 100%;
-    height: 100vh;
-  }
-
   .container-title-email {
-    top: 15px;
+    top: 10px;
     width: 100%;
     height: auto;
     font-family: $font-family;
@@ -101,10 +98,10 @@
         font-weight: 500;
       }
 
-      .name-user, 
+      .name-user,
       .title-email {
-        width: 80%;
         margin: 0;
+        width: 80%;
       }
 
       .email-date,
@@ -116,8 +113,9 @@
   }
 
   .email-container {
-    background-color: $body-bg;
     float: right;
+    background-color: $body-bg;
+    
 
     .buttons-row,
     .row-header-user,
@@ -125,18 +123,63 @@
     .email-text,
     .row-final-reply  {
       width: 100%;
-  
+    }
+    
+    .buttons-row {
       .error-btn-header,
       .spam-btn-header,
       .info-btn-header {
+        border-radius: 5px;
+        padding: 5px;
+        height: 40px;
+      }
+
+      .error-btn-header,
+      .spam-btn-header {
         width: 30px;
       }
+
+      .spam-btn-header {
+        margin-left: 15px;
+        border: 1px solid $dark-gray;
+        background-color: transparent;
+        color: $black;
+      }
+
+      .info-btn-header {
+        width: auto;
+        position: relative;
+        float: right;
+      }
     }
-  
+
+    .row-header-user {
+      border-top: 1px solid black;
+    }
+
+    .row-subjects-tags {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+
+      span {
+        margin-right: 15px;
+        box-shadow: 0px 0px 3px 3px rgba(196, 194, 196, 0.75);
+        padding: 5px;
+      }
+    }
+
     .container-email-text,
     .row-subjects-tags {
+      border-radius: 10px;
       background-color: $white;
+      padding: 15px;
+    }
+
+    .container-email-text {
+      height: 70vh;
     }
   }
-
 }
