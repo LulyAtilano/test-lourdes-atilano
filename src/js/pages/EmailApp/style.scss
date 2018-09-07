@@ -85,8 +85,7 @@
 
       .name-user,
       .email-date,
-      .title-email,
-      .attach-icon-email {
+      .title-email {
         display: inline-flex;
         color: $text-color;
       }
@@ -109,6 +108,10 @@
         width: 20%;
       }
 
+      .attach-icon-email {
+        position: relative;
+        float: right;
+      }
     }
   }
 
@@ -116,7 +119,6 @@
     float: right;
     background-color: $body-bg;
     
-
     .buttons-row,
     .row-header-user,
     .row-subjects-tags,
@@ -125,16 +127,19 @@
       width: 100%;
     }
     
-    .buttons-row {
-      .error-btn-header,
+    .buttons-row,
+    .row-final-reply {
+      box-sizing: border-box;
+
+      .delete-btn-header,
       .spam-btn-header,
-      .info-btn-header {
+      .unread-btn-header {
         border-radius: 5px;
         padding: 5px;
         height: 40px;
       }
 
-      .error-btn-header,
+      .delete-btn-header,
       .spam-btn-header {
         width: 30px;
       }
@@ -146,15 +151,41 @@
         color: $black;
       }
 
-      .info-btn-header {
-        width: auto;
+      .unread-btn-header {
         position: relative;
         float: right;
+        width: auto;
+      }
+
+      .unread-btn-header:last-child {
+        border-radius: 0px;
+      }
+
+      .attach-icon-email {
+        color: $dark-gray;
+        font-weight: lighter;
       }
     }
 
+    .row-final-reply {
+      flex-wrap: wrap;
+      border-bottom: 1px solid $black-gray-light;
+      height: 41px;
+
+      .attach-icon-email {
+        position: relative;
+        top: 15px;
+        left: 10px;
+        color: $black-gray;
+        font-size: 1.2em;
+        font-weight: lighter;
+      }
+
+    }
+
     .row-header-user {
-      border-top: 1px solid black;
+      border-top: 1px solid $black-gray-light
+
     }
 
     .row-subjects-tags {
@@ -178,8 +209,16 @@
       padding: 15px;
     }
 
+    .row-subjects-tags {
+      p {
+        display: inline-flex;
+        margin-right: 15px;
+        font-weight: 500;
+      }
+    }
+
     .container-email-text {
-      height: 70vh;
+      height: 40vh;
     }
   }
 }
