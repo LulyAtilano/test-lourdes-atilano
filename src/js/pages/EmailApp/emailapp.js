@@ -46,7 +46,7 @@ class EmailApp extends Component {
                     <h5 styleName="name-user"> Name User </h5>
                     <span styleName="email-date"> 08:35 AM </span>
                     <p styleName="title-email"> title email </p>
-                    <span styleName="attach-icon-email"> @ </span>
+                    <span styleName="attach-icon-email"> <i class="fas fa-paperclip"></i> </span>
                 </div>
               </PanelRow>
             </div>
@@ -54,12 +54,12 @@ class EmailApp extends Component {
           <PanelBody styleName="container-rigth">
             <div styleName="email-container">
               <PanelRow styleName="buttons-row">
-                <Button styleName="error-btn-header"
+                <Button styleName="delete-btn-header"
                   color= "error"
                 > Delete </Button>
                 <Button styleName="spam-btn-header"
                 > Spam </Button>
-                <Button styleName="info-btn-header"
+                <Button styleName="unread-btn-header"
                   color="info"
                 > Mark as unread </Button>
               </PanelRow>
@@ -67,19 +67,18 @@ class EmailApp extends Component {
                   <h3> Name User </h3>
               </PanelRow>
               <PanelRow styleName="row-subjects-tags">
-                  <span> Inbox </span>
-                  <span> business </span>
+                <p> Tags </p>
+                <span> Inbox </span>
+                <span> business </span>
               </PanelRow>
               <PanelRow>
                 <div styleName="container-email-text">_email content_</div>
               </PanelRow>
               <PanelRow styleName="row-final-reply">
-                icon
-                <Button
-                  color="primary"
-                >
-                  Replay
-                </Button>
+                <span styleName="attach-icon-email"> <i class="fas fa-paperclip"></i> </span>
+                <Button styleName="unread-btn-header"
+                  color="info"
+                > Replay </Button>
               </PanelRow>
             </div>
           </PanelBody>
