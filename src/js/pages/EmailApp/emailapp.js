@@ -12,7 +12,7 @@ class EmailApp extends Component {
 
     return (
       <div id="email-app" styleName="email-app">
-        <Panel>
+        <Panel title="" styleName="panel-email-app">
           <PanelBody styleName="container-left">
             <div styleName="email-list">
               <PanelRow styleName="row-header">
@@ -30,13 +30,13 @@ class EmailApp extends Component {
                   //showActiveItem
                 />
               </PanelRow>
-              <PanelRow>
+              <PanelRow styleName="row-input-search">
                 <TextField styleName="input-search"
                   id="name"
                   name="name"
                   label=""
                   placeholder="Search"
-                  //rightIcon={img src="https://fontawesome.com/icons/search?style=solid"}
+                  rightIcon={<i className="fas fa-search"></i>}
                   //rightIcon={<img src="http://via.placeholder.com/20x20" />}
                   autoComplete="off"
                 />
@@ -46,7 +46,7 @@ class EmailApp extends Component {
                     <h5 styleName="name-user"> Name User </h5>
                     <span styleName="email-date"> 08:35 AM </span>
                     <p styleName="title-email"> title email </p>
-                    <span styleName="attach-icon-email"> <i class="fas fa-paperclip"></i> </span>
+                    <span styleName="attach-icon-email"> <i className="fas fa-paperclip"></i> </span>
                 </div>
               </PanelRow>
             </div>
@@ -75,7 +75,7 @@ class EmailApp extends Component {
                 <div styleName="container-email-text">_email content_</div>
               </PanelRow>
               <PanelRow styleName="row-final-reply">
-                <span styleName="attach-icon-email"> <i class="fas fa-paperclip"></i> </span>
+                <span styleName="attach-icon-email"> <i className="fas fa-paperclip"></i> </span>
                 <Button styleName="unread-btn-header"
                   color="info"
                 > Replay </Button>
